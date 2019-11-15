@@ -1,0 +1,732 @@
+> .ess.source('c:/Dropbox/scratch/CFPLML_test2/_RunAll_.R', visibly = FALSE, output = TRUE)
+[1] "Rprograms/10-RandomForest/10-predict_forc_randomforest.R"
+[1] "percentage decrease in MSE from using a random forest relative to the AR(2)"
+[1] -0.3645148
+[1] "percentage decrease in MSE from using a random forest relative to a full lm model"
+[1] -0.6011345
+[1] "percentage decrease in MSE from using a random forest relative to the ARX(2,2) with Forc and HPA"
+[1] -0.2929293
+[1] "Rprograms/20-SynthCountyState/10-synth_county.R"
+Loading required package: MirrorDescSynth
+[1] "BFGS"
+[1] "Dataprep finished. Starting Synth Estimation"
+[1] "Synth Finished -- Saving Output: "
+[1] "Running Permutation Test"
+[1] "output/10-County_Forc/"
+[1] "output/10-County_Forc/10-County_Forc_zillow.forc.rds"
+[1] "According to Synth Estimates, the CFPLs reduced forelocures by -236656.765 homes or -20.173 percent"
+[1] "Rprograms/20-SynthCountyState/20-state_synth_pre.R"
+[1] "Rprograms/20-SynthCountyState/21-synth_state.R"
+Loading required package: MirrorDescSynth
+[1] "forc"
+[1] "BFGS"
+[1] "Dataprep finished. Starting Synth Estimation"
+[1] "Synth Finished -- Saving Output: "
+[1] "Running Permutation Test"
+[1] "output/31-synth_state/"
+[1] "output/31-synth_state/31-synth_state_forc.rds"
+[1] "forc.prime"
+[1] "BFGS"
+[1] "Dataprep finished. Starting Synth Estimation"
+[1] "Synth Finished -- Saving Output: "
+[1] "Running Permutation Test"
+[1] "output/31-synth_state/"
+[1] "output/31-synth_state/31-synth_state_forc.prime.rds"
+[1] "forc.subprime"
+[1] "BFGS"
+[1] "Dataprep finished. Starting Synth Estimation"
+[1] "Synth Finished -- Saving Output: "
+[1] "Running Permutation Test"
+[1] "output/31-synth_state/"
+[1] "output/31-synth_state/31-synth_state_forc.subprime.rds"
+[1] "State_Zillow_forc"
+[1] "BFGS"
+[1] "Dataprep finished. Starting Synth Estimation"
+[1] "Synth Finished -- Saving Output: "
+[1] "Running Permutation Test"
+[1] "output/31-synth_state/"
+[1] "output/31-synth_state/31-synth_state_State_Zillow_forc.rds"
+[1] "mdri"
+[1] "BFGS"
+[1] "Dataprep finished. Starting Synth Estimation"
+[1] "Synth Finished -- Saving Output: "
+[1] "Running Permutation Test"
+[1] "output/31-synth_state/"
+[1] "output/31-synth_state/31-synth_state_mdri.rds"
+[1] "fhfa_state_ret"
+[1] "BFGS"
+[1] "Dataprep finished. Starting Synth Estimation"
+[1] "Synth Finished -- Saving Output: "
+[1] "Running Permutation Test"
+[1] "output/31-synth_state/"
+[1] "output/31-synth_state/31-synth_state_fhfa_state_ret.rds"
+[1] "State_Zhvi_AllHomes_ret"
+[1] "BFGS"
+[1] "Dataprep finished. Starting Synth Estimation"
+[1] "Synth Finished -- Saving Output: "
+[1] "Running Permutation Test"
+[1] "output/31-synth_state/"
+[1] "output/31-synth_state/31-synth_state_State_Zhvi_AllHomes_ret.rds"
+[1] "State_Zhvi_BottomTier_ret"
+[1] "BFGS"
+[1] "Dataprep finished. Starting Synth Estimation"
+[1] "Synth Finished -- Saving Output: "
+[1] "Running Permutation Test"
+[1] "output/31-synth_state/"
+[1] "output/31-synth_state/31-synth_state_State_Zhvi_BottomTier_ret.rds"
+[1] "State_Zhvi_TopTier_ret"
+[1] "BFGS"
+[1] "Dataprep finished. Starting Synth Estimation"
+[1] "Synth Finished -- Saving Output: "
+[1] "Running Permutation Test"
+[1] "output/31-synth_state/"
+[1] "output/31-synth_state/31-synth_state_State_Zhvi_TopTier_ret.rds"
+[1] "Rprograms/20-SynthCountyState/22-state_synth_tables.R"
+Loading required package: MirrorDescSynth
+
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Wed, Nov 13, 2019 - 7:00:57 PM
+\begin{table}[!htbp] \centering 
+  \caption{\textbf{State-Level Synthetic Control Estimation Results}} 
+  \label{tab:synth_state} 
+\begin{tabular}{@{\extracolsep{5pt}} cccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & MSE & CA & Synth & Gap & GapPcntle \\ 
+\hline \\[-1.8ex] 
+Forc Starts (\% of All Loans) & 0.01 & 20.90 & 32.81 & -11.91 & 0.00 \\ 
+Prime Forc Starts (\% of Prime Loans) & 0.00 & 17.26 & 29.08 & -11.82 & 0.00 \\ 
+Subprime Forc Starts (\% of Subprime Loans) & 0.03 & 59.18 & 83.40 & -24.22 & 0.00 \\ 
+Zillow REO Forc per 10,000 Homes & 0.95 & 839.71 & 1208.86 & -369.15 & 0.00 \\ 
+Mortgage Default Risk (MDRI) & 0.01 & 25.47 & 53.52 & -28.04 & 0.00 \\ 
+\hline \\[-1.8ex] 
+\end{tabular} 
+\end{table} 
+
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Wed, Nov 13, 2019 - 7:00:57 PM
+\begin{table}[!htbp] \centering 
+  \caption{} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}} cccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & MSE & CA & Synth & Gap & GapPcntle \\ 
+\hline \\[-1.8ex] 
+FHFA HP Growth (\%) & 0.40 & -25.25 & -47.94 & 22.69 & 100.00 \\ 
+Zillow All Homes HP Growth (\%) & 0.03 & -28.48 & -46.01 & 17.53 & 100.00 \\ 
+Zillow Bottom Tier HP Growth (\%) & 0.05 & -47.67 & -70.98 & 23.31 & 100.00 \\ 
+Zillow Top Tier HP Growth (\%) & 0.04 & -13.56 & -23.34 & 9.78 & 91.18 \\ 
+\hline \\[-1.8ex] 
+\end{tabular} 
+\end{table} 
+[1] "Rprograms/25-CountyReg/10-county_reg_felm.R"
+[1] "The forc.high cutoff is as 7.54097577390971"
+[1] "The forc.high cutoff percentile is as 0.819587628865979"
+[1] "cumulative DDD 2008-07-01 to 2011-12-01:"
+[1] -451.4392
+[1] "cumulative DDD F-test 2008-07-01 to 2011-12-01:"
+# A tibble: 2 x 4
+  res.df    df statistic     p.value
+   <dbl> <dbl>     <dbl>       <dbl>
+1  35814    NA      NA   NA         
+2  35813     1      20.6  0.00000559
+[1] "Synth cumulative DDD 2008-07-01 to 2011-12-01:"
+[1] -250.201
+[1] "cumulative DDD F-test 2008-07-01 to 2011-12-01:"
+# A tibble: 2 x 4
+  res.df    df statistic  p.value
+   <dbl> <dbl>     <dbl>    <dbl>
+1   4561    NA     NA    NA      
+2   4560     1      9.53  0.00202
+[1] "Rprograms/25-CountyReg/20-county_reg_tables.R"
+[1] "Rprograms/25-CountyReg/30-county_reg_felm_bartik_qcew.R"
+[1] "Rprograms/25-CountyReg/35-county_reg_felm_hp_ret.R"
+[1] "Rprograms/25-CountyReg/36-county_reg_felm_bartik_ret_interaction.R"
+[1] "Rprograms/25-CountyReg/40-county_reg_time_trends.R"
+[1] "Rprograms/25-CountyReg/50-county_reg_ca_only.R"
+[1] "Rprograms/50-HmdaReg/00-preliminaries.R"
+[1] "Rprograms/50-HmdaReg/10-hmda_reg_all.R"
+
+============================================================================
+                                   Dependent variable:                      
+             ---------------------------------------------------------------
+                     Denied         LoanAmount_thousands_growth  numLoans_growth 
+               (1)        (2)            (3)        (4)      (5)      (6)   
+----------------------------------------------------------------------------
+CA           -0.005    -0.076***      0.083***    0.077*** 0.133*** 0.115***
+             (0.013)    (0.014)        (0.028)    (0.026)  (0.032)  (0.026) 
+                                                                            
+----------------------------------------------------------------------------
+Observations 797,732   1,278,510        1,044      1,601    1,044    1,601  
+============================================================================
+Note:                                            *p<0.1; **p<0.05; ***p<0.01
+
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Wed, Nov 13, 2019 - 7:11:59 PM
+\begin{table}[!htbp] \centering 
+  \caption{\textbf{Probability of Denial and Loan Volume Growth After the CFPLs}} 
+  \label{tab:hmda_reg} 
+\begin{tabular}{@{\extracolsep{5pt}}lcccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{6}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-7} 
+\\[-1.8ex] & \multicolumn{2}{c}{Denied} & \multicolumn{2}{c}{LoanAmount\_thousands\_growth} & \multicolumn{2}{c}{numLoans\_growth} \\ 
+\\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6)\\ 
+\hline \\[-1.8ex] 
+ CA & $-$0.005 & $-$0.076$^{}$ & 0.083$^{}$ & 0.077$^{}$ & 0.133$^{}$ & 0.115$^{}$ \\ 
+  & (0.013) & (0.014) & (0.028) & (0.026) & (0.032) & (0.026) \\ 
+  & & & & & & \\ 
+\hline \\[-1.8ex] 
+Observations & 797,732 & 1,278,510 & 1,044 & 1,601 & 1,044 & 1,601 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{6}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table} 
+[1] "Rprograms/89-Robustness/11-synth_county_ui_quintile.R"
+Loading required package: MirrorDescSynth
+[1] "BFGS"
+[1] "Dataprep finished. Starting Synth Estimation"
+[1] "Synth Finished -- Saving Output: "
+[1] "output/11-County_Forc_UI/"
+[1] "output/11-County_Forc_UI/11-County_Forc_UI_zillow.forc.rds"
+[1] "According to Synth Estimates, the CFPLs reduced forelocures using only States in quintile5 by -439295.394 homes or -31.931 percent"
+[1] "Rprograms/89-Robustness/12-synth-county_non_judicial.R"
+Loading required package: MirrorDescSynth
+[1] "BFGS"
+[1] "Dataprep finished. Starting Synth Estimation"
+[1] "Synth Finished -- Saving Output: "
+[1] "output/12-County_Forc_non_judicial/"
+[1] "output/12-County_Forc_non_judicial/12-County_Forc_non_judicial_zillow.forc.rds"
+[1] "According to Synth Estimates, the CFPLs reduced forelocures when the control group only consists of non-judicial foreclosure states by -246195.196 homes or -20.817 percent"
+[1] "Rprograms/89-Robustness/13-synth_county_ca_only.R"
+Loading required package: MirrorDescSynth
+[1] "BFGS"
+[1] "Dataprep finished. Starting Synth Estimation"
+[1] "Synth Finished -- Saving Output: "
+[1] "Running Permutation Test"
+[1] "output/13-County_Forc_CA_Only/"
+[1] "output/13-County_Forc_CA_Only/13-County_Forc_CA_Only_ln.zillow.forc.rds"
+Loading required package: lattice
+Loading required package: survival
+Loading required package: Formula
+
+Attaching package: 'Hmisc'
+
+The following objects are masked from 'package:base':
+
+    format.pval, units
+
+[1] "Rprograms/90-PlotsFinal/05-state_plots.R"
+[1] "Rprograms/90-PlotsFinal/06-state_synth_plot.R"
+Loading required package: MirrorDescSynth
+[1] "Rprograms/90-PlotsFinal/10-reg_county_plot.R"
+[1] "Rprograms/90-PlotsFinal/15-county_plot_reg_robust.R"
+[1] "Rprograms/90-PlotsFinal/20-synth_county_plot.R"
+Loading required package: MirrorDescSynth
+
+Attaching package: 'scales'
+
+The following object is masked from 'package:kernlab':
+
+    alpha
+
+[1] "Foreclosure reduction in San Beranardino (06071)"
+   region CFPL.cum.gap CFPL.control
+1:  06071    -525.3293     1866.095
+[1] "According to Synth Estimates, the CFPLs reduced forelocures by -236656.765 homes or -20.173 percent"
+[1] "Rprograms/90-PlotsFinal/25-synth_county_control_regions_plot.R"
+Loading required package: MirrorDescSynth
+[1] "Rprograms/90-PlotsFinal/30-county_plot_grid.R"
+[1] "Rprograms/90-PlotsFinal/40-zip_plots.R"
+Loading required package: MirrorDescSynth
+[1] "Median County-Level Synth Reduction in Foreclosures: "
+      50% 
+-302.5598 
+
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Wed, Nov 13, 2019 - 7:27:34 PM
+\begin{table}[!htbp] \centering 
+  \caption{\textbf{Zip Code CFPL DDD Regressions -- Foreclosures and House Price Growth}} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lcccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{4}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-5} 
+\\[-1.8ex] & \multicolumn{4}{c}{ret.gap} \\ 
+\\[-1.8ex] & \multicolumn{2}{c}{\textit{felm}} & \multicolumn{2}{c}{\textit{quantile}} \\ 
+ & \multicolumn{2}{c}{\textit{}} & \multicolumn{2}{c}{\textit{regression}} \\ 
+\\[-1.8ex] & (1) & (2) & (3) & (4)\\ 
+\hline \\[-1.8ex] 
+ forc.gap & $-$0.023$^{}$ & $-$0.022$^{}$ & $-$0.027$^{}$ & $-$0.027$^{}$ \\ 
+  & (0.004) & (0.005) & (0.002) & (0.002) \\ 
+  & & & & \\ 
+ bartik &  & $-$2.835$^{}$ &  & $-$2.470$^{}$ \\ 
+  &  & (1.070) &  & (0.630) \\ 
+  & & & & \\ 
+ IncomePerHousehold &  & $-$0.064$^{}$ &  & $-$0.070$^{}$ \\ 
+  &  & (0.019) &  & (0.010) \\ 
+  & & & & \\ 
+ hp &  & 0.019$^{}$ &  & 0.019$^{}$ \\ 
+  &  & (0.005) &  & (0.002) \\ 
+  & & & & \\ 
+ Constant & 0.113 & $-$26.549$^{}$ & 0.644 & $-$23.201$^{}$ \\ 
+  & (1.127) & (8.528) & (0.756) & (5.223) \\ 
+  & & & & \\ 
+\hline \\[-1.8ex] 
+Observations & 1,079 & 1,079 & 1,079 & 1,079 \\ 
+R$^{2}$ & 0.144 & 0.205 &  &  \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{4}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table} 
+Smoothing formula not specified. Using: y ~ x
+Linking to GEOS 3.6.1, GDAL 2.2.3, PROJ 4.9.3
+[1] "Increase in house prices due to the CFPLs (percent):"
+[1] 5.409117
+[1] "increase in housing wealth due to the CFPLs ($billions)"
+[1] 307.2931
+[1] "R-loan_level_forc_costs/10-forc_costs_non_judicial.R"
+
+==============================================================================
+                                       Dependent variable:                    
+                    ----------------------------------------------------------
+                                    preservation.repair.costs                 
+                        (1)          (2)         (3)        (4)        (5)    
+------------------------------------------------------------------------------
+CA                    -57.887      169.838     187.892                        
+                     (270.238)    (317.595)   (281.653)                       
+                                                                              
+CFPL                 478.728***    229.776                                    
+                     (172.828)    (178.843)                                   
+                                                                              
+CA.CFPL              573.777***   493.146***  471.543*** 314.882*** 411.657***
+                     (172.828)    (173.795)   (149.974)  (105.062)  (106.468) 
+                                                                              
+months.in.reo.forc                314.932***  324.301*** 412.341*** 411.199***
+                                   (47.288)    (44.554)   (64.068)   (60.718) 
+                                                                              
+months.in.reo.forc2                -3.091**   -3.356***  -5.222***  -5.361*** 
+                                   (1.326)     (1.213)    (1.682)    (1.607)  
+                                                                              
+Constant            3,016.112*** 1,007.346***                                 
+                     (270.238)    (292.208)                                   
+                                                                              
+------------------------------------------------------------------------------
+Observations           31,056       31,056      31,056     31,056     31,056  
+==============================================================================
+Note:                                              *p<0.1; **p<0.05; ***p<0.01
+
+The Impact of the CFPLs on Foreclosure Costs
+=========================================================================================
+                                             Dependent variable:                         
+                    ---------------------------------------------------------------------
+                                          preservation.repair.costs                      
+                       (1)       (2)       (3)       (4)       (5)       (6)       (7)   
+-----------------------------------------------------------------------------------------
+CA                   -57.887   169.838   187.892                                         
+                    (270.238) (317.595) (281.653)                                        
+                                                                                         
+CFPL                 478.728   229.776                                                   
+                    (172.828) (178.843)                                                  
+                                                                                         
+CA.CFPL              573.777   493.146   471.543   314.882   411.657   946.176   917.492 
+                    (172.828) (173.795) (149.974) (105.062) (106.468) (184.043) (254.104)
+                                                                                         
+months.in.reo.forc             314.932   324.301   412.341   411.199   420.230   423.470 
+                              (47.288)  (44.554)  (64.068)  (60.718)  (67.044)  (68.839) 
+                                                                                         
+months.in.reo.forc2            -3.091    -3.356    -5.222    -5.361    -5.683    -5.709  
+                               (1.326)   (1.213)   (1.682)   (1.607)   (1.845)   (1.911) 
+                                                                                         
+Constant            3,016.112 1,007.346                                                  
+                    (270.238) (292.208)                                                  
+                                                                                         
+-----------------------------------------------------------------------------------------
+Observations         31,056    31,056    31,056    31,056    31,056    31,056    31,056  
+=========================================================================================
+Note:                                                         *p<0.1; **p<0.05; ***p<0.01
+
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Wed, Nov 13, 2019 - 7:34:53 PM
+\begin{table}[!htbp] \centering 
+  \caption{\textbf{The Impact of the CFPLs on Foreclosure Maintenance and Repair Spending -- Non-Judicial States}} 
+  \label{tab:reg_forc_costs_non_judicial} 
+\small 
+\begin{tabular}{@{\extracolsep{5pt}}lccccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{7}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-8} 
+\\[-1.8ex] & \multicolumn{7}{c}{preservation.repair.costs} \\ 
+\\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6) & (7)\\ 
+\hline \\[-1.8ex] 
+ CA & $-$57.887 & 169.838 & 187.892 &  &  &  &  \\ 
+  & (270.238) & (317.595) & (281.653) &  &  &  &  \\ 
+  & & & & & & & \\ 
+ CFPL & 478.728$^{}$ & 229.776 &  &  &  &  &  \\ 
+  & (172.828) & (178.843) &  &  &  &  &  \\ 
+  & & & & & & & \\ 
+ CA.CFPL & 573.777$^{}$ & 493.146$^{}$ & 471.543$^{}$ & 314.882$^{}$ & 411.657$^{}$ & 946.176$^{}$ & 917.492$^{}$ \\ 
+  & (172.828) & (173.795) & (149.974) & (105.062) & (106.468) & (184.043) & (254.104) \\ 
+  & & & & & & & \\ 
+ months.in.reo.forc &  & 314.932$^{}$ & 324.301$^{}$ & 412.341$^{}$ & 411.199$^{}$ & 420.230$^{}$ & 423.470$^{}$ \\ 
+  &  & (47.288) & (44.554) & (64.068) & (60.718) & (67.044) & (68.839) \\ 
+  & & & & & & & \\ 
+ months.in.reo.forc2 &  & $-$3.091$^{}$ & $-$3.356$^{}$ & $-$5.222$^{}$ & $-$5.361$^{}$ & $-$5.683$^{}$ & $-$5.709$^{}$ \\ 
+  &  & (1.326) & (1.213) & (1.682) & (1.607) & (1.845) & (1.911) \\ 
+  & & & & & & & \\ 
+ Constant & 3,016.112$^{}$ & 1,007.346$^{}$ &  &  &  &  &  \\ 
+  & (270.238) & (292.208) &  &  &  &  &  \\ 
+  & & & & & & & \\ 
+\hline \\[-1.8ex] 
+Observations & 31,056 & 31,056 & 31,056 & 31,056 & 31,056 & 31,056 & 31,056 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{7}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table} 
+[1] "R-loan_level_forc_costs/11-forc_costs_all_states.R"
+
+============================================================================
+                                      Dependent variable:                   
+                    --------------------------------------------------------
+                                   preservation.repair.costs                
+                        (1)         (2)        (3)        (4)        (5)    
+----------------------------------------------------------------------------
+CA                    -56.529     105.762    154.533                        
+                     (160.125)   (193.103)  (172.979)                       
+                                                                            
+CFPL                 518.554***  227.229**                                  
+                     (115.278)   (115.337)                                  
+                                                                            
+CA.CFPL              533.950***  475.247*** 423.616*** 262.886*** 338.503***
+                     (115.278)   (112.701)  (100.301)   (81.246)   (85.976) 
+                                                                            
+months.in.reo.forc               328.373*** 334.543*** 412.282*** 407.824***
+                                  (41.607)   (41.094)   (44.527)   (41.949) 
+                                                                            
+months.in.reo.forc2              -2.967***  -3.145***  -4.909***  -4.927*** 
+                                  (1.083)    (1.045)    (1.230)    (1.186)  
+                                                                            
+Constant            3,014.754*** 984.459***                                 
+                     (160.125)   (196.514)                                  
+                                                                            
+----------------------------------------------------------------------------
+Observations           47,887      47,887     47,887     47,887     47,887  
+============================================================================
+Note:                                            *p<0.1; **p<0.05; ***p<0.01
+
+The Impact of the CFPLs on Foreclosure Costs
+=======================================================================================
+                                            Dependent variable:                        
+                    -------------------------------------------------------------------
+                                         preservation.repair.costs                     
+                       (1)       (2)       (3)      (4)      (5)       (6)       (7)   
+---------------------------------------------------------------------------------------
+CA                   -56.529   105.762   154.533                                       
+                    (160.125) (193.103) (172.979)                                      
+                                                                                       
+CFPL                 518.554   227.229                                                 
+                    (115.278) (115.337)                                                
+                                                                                       
+CA.CFPL              533.950   475.247   423.616  262.886  338.503   919.915   838.276 
+                    (115.278) (112.701) (100.301) (81.246) (85.976) (135.388) (188.824)
+                                                                                       
+months.in.reo.forc             328.373   334.543  412.282  407.824   413.435   416.606 
+                              (41.607)  (41.094)  (44.527) (41.949) (45.949)  (46.996) 
+                                                                                       
+months.in.reo.forc2            -2.967    -3.145    -4.909   -4.927   -5.105    -5.129  
+                               (1.083)   (1.045)  (1.230)  (1.186)   (1.337)   (1.387) 
+                                                                                       
+Constant            3,014.754  984.459                                                 
+                    (160.125) (196.514)                                                
+                                                                                       
+---------------------------------------------------------------------------------------
+Observations         47,887    47,887    47,887    47,887   47,887   47,887    47,887  
+=======================================================================================
+Note:                                                       *p<0.1; **p<0.05; ***p<0.01
+
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Wed, Nov 13, 2019 - 7:52:27 PM
+\begin{table}[!htbp] \centering 
+  \caption{\textbf{The Impact of the CFPLs on Foreclosure Maintenance and Repair Spending -- All States}} 
+  \label{tab:reg_forc_costs_all_states} 
+\small 
+\begin{tabular}{@{\extracolsep{5pt}}lccccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{7}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-8} 
+\\[-1.8ex] & \multicolumn{7}{c}{preservation.repair.costs} \\ 
+\\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6) & (7)\\ 
+\hline \\[-1.8ex] 
+ CA & $-$56.529 & 105.762 & 154.533 &  &  &  &  \\ 
+  & (160.125) & (193.103) & (172.979) &  &  &  &  \\ 
+  & & & & & & & \\ 
+ CFPL & 518.554$^{}$ & 227.229$^{}$ &  &  &  &  &  \\ 
+  & (115.278) & (115.337) &  &  &  &  &  \\ 
+  & & & & & & & \\ 
+ CA.CFPL & 533.950$^{}$ & 475.247$^{}$ & 423.616$^{}$ & 262.886$^{}$ & 338.503$^{}$ & 919.915$^{}$ & 838.276$^{}$ \\ 
+  & (115.278) & (112.701) & (100.301) & (81.246) & (85.976) & (135.388) & (188.824) \\ 
+  & & & & & & & \\ 
+ months.in.reo.forc &  & 328.373$^{}$ & 334.543$^{}$ & 412.282$^{}$ & 407.824$^{}$ & 413.435$^{}$ & 416.606$^{}$ \\ 
+  &  & (41.607) & (41.094) & (44.527) & (41.949) & (45.949) & (46.996) \\ 
+  & & & & & & & \\ 
+ months.in.reo.forc2 &  & $-$2.967$^{}$ & $-$3.145$^{}$ & $-$4.909$^{}$ & $-$4.927$^{}$ & $-$5.105$^{}$ & $-$5.129$^{}$ \\ 
+  &  & (1.083) & (1.045) & (1.230) & (1.186) & (1.337) & (1.387) \\ 
+  & & & & & & & \\ 
+ Constant & 3,014.754$^{}$ & 984.459$^{}$ &  &  &  &  &  \\ 
+  & (160.125) & (196.514) &  &  &  &  &  \\ 
+  & & & & & & & \\ 
+\hline \\[-1.8ex] 
+Observations & 47,887 & 47,887 & 47,887 & 47,887 & 47,887 & 47,887 & 47,887 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{7}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table} 
+[1] "R-loan_level_forc_costs/20-months_in_reo_forc.R"
+
+==============================================================
+                            Dependent variable:               
+             -------------------------------------------------
+                            months.in.reo.forc                
+               (1)     (2)     (3)      (4)     (5)     (6)   
+--------------------------------------------------------------
+CA            0.057                    0.186                  
+             (0.301)                  (0.208)                 
+                                                              
+CA.CFPL      -0.662  -0.573* -0.589** -0.591* -0.430* -0.475**
+             (0.421) (0.313) (0.296)  (0.329) (0.227) (0.215) 
+                                                              
+--------------------------------------------------------------
+Observations 31,652  31,652   31,652  48,673  48,673   48,673 
+==============================================================
+Note:                              *p<0.1; **p<0.05; ***p<0.01
+
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Wed, Nov 13, 2019 - 7:52:51 PM
+\begin{table}[!htbp] \centering 
+  \caption{\textbf{The Impact of the CFPLs on REO Foreclosure Durations}} 
+  \label{tab:reg_forc_durations} 
+\begin{tabular}{@{\extracolsep{5pt}}lcccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{6}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-7} 
+\\[-1.8ex] & \multicolumn{6}{c}{months.in.reo.forc} \\ 
+\\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6)\\ 
+\hline \\[-1.8ex] 
+ CA & 0.057 &  &  & 0.186 &  &  \\ 
+  & (0.301) &  &  & (0.208) &  &  \\ 
+  & & & & & & \\ 
+ CA.CFPL & $-$0.662 & $-$0.573$^{}$ & $-$0.589$^{}$ & $-$0.591$^{}$ & $-$0.430$^{}$ & $-$0.475$^{}$ \\ 
+  & (0.421) & (0.313) & (0.296) & (0.329) & (0.227) & (0.215) \\ 
+  & & & & & & \\ 
+\hline \\[-1.8ex] 
+Observations & 31,652 & 31,652 & 31,652 & 48,673 & 48,673 & 48,673 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{6}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table} 
+[1] "R-LL_forc_2step/00-pre.R"
+[1] "R-LL_forc_2step/10-2step_reo_forc.R"
+[1] "The CFPL percentage change in the reo foreclosure rate for 2008-07-01 to 2009-02-01 relative to forc high, non-CA zip3s is "
+[1] -37.98408
+[1] "R-LL_forc_2step/20-2step_mod.R"
+[1] "DD Modification estiamtes for CA 2008-07-01 - 2012-12-01"
+   num.mods  mod.rate
+1: 70503.65 0.0131002
+[1] "The CFPL percentage change in the modification rate for 2008-07-01 to 2009-02-01 relative to non-CA zip3s is "
+[1] 38.43264
+[1] "R-LL_forc_2step/30-forc_alt_2step.R"
+[1] "pre-Hamp announcement DDD F-stat"
+# A tibble: 2 x 4
+  res.df    df statistic p.value
+   <dbl> <dbl>     <dbl>   <dbl>
+1  12450    NA     NA     NA    
+2  12449     1      1.35   0.246
+[1] "Up to 2010-12-01 DDD F-stat"
+# A tibble: 2 x 4
+  res.df    df statistic    p.value
+   <dbl> <dbl>     <dbl>      <dbl>
+1  12450    NA      NA   NA        
+2  12449     1      17.0  0.0000366
+[1] "Up to 2011-12-01 DDD F-stat"
+# A tibble: 2 x 4
+  res.df    df statistic   p.value
+   <dbl> <dbl>     <dbl>     <dbl>
+1  12450    NA      NA   NA       
+2  12449     1      13.4  0.000248
+[1] "R-LL_forc_2step/90-PlotsFinal/10-plots_final.R"
+[[1]]
+NULL
+
+[[2]]
+NULL
+
+[[3]]
+NULL
+
+[[4]]
+NULL
+
+[[5]]
+NULL
+
+[[6]]
+NULL
+
+[[7]]
+NULL
+
+[[8]]
+NULL
+
+[[9]]
+NULL
+
+[[10]]
+NULL
+
+[[11]]
+NULL
+
+[[12]]
+NULL
+
+[[13]]
+NULL
+
+[[14]]
+NULL
+
+[[15]]
+NULL
+
+[[16]]
+NULL
+
+[[17]]
+NULL
+
+[[18]]
+NULL
+
+[[19]]
+NULL
+
+[[20]]
+NULL
+
+[[21]]
+NULL
+
+[[22]]
+NULL
+
+[[23]]
+NULL
+
+[[24]]
+NULL
+
+[[25]]
+NULL
+
+[[26]]
+NULL
+
+[[27]]
+NULL
+
+[[28]]
+NULL
+
+[[29]]
+NULL
+
+[[30]]
+NULL
+
+[[31]]
+NULL
+
+[[32]]
+NULL
+
+[[33]]
+NULL
+
+[1] "R/10-bbx_diff_diff_tahoe.R"
+[1] "R/20-bbx_diff_diff_az_nv_ca_border.R"
+|--------------------------------------------------|
+|==================================================|
+[1] "R/30-bbx_diff_diff_plot_grid.R"
+[1] "R/50-get_tahoe_border_zip3_CA_NV.R"
+[1] "R/51-get_az_ca_nv_zip3_boarder.R"
+[1] "CFPL_FromDefaultOrCurrent/Data/Data_Crosswalks/10-clean_cw_zip_to_state.R"
+[1] "CFPL_FromDefaultOrCurrent/R/010-est_trans_probs_distressed_to_forc.R"
+[1] "CFPL_FromDefaultOrCurrent/R/020-est_trans_probs_default_to_current.R"
+[1] "CFPL_FromDefaultOrCurrent/R/030-est_trans_strategic_default_current_straight_to_delin90.R"
+[[1]]
+[[1]]$value
+NULL
+
+[[1]]$visible
+[1] FALSE
+
+
+[[2]]
+[[2]]$value
+NULL
+
+[[2]]$visible
+[1] FALSE
+
+
+[[3]]
+[[3]]$value
+NULL
+
+[[3]]$visible
+[1] FALSE
+
+
+[[4]]
+[[4]]$value
+NULL
+
+[[4]]$visible
+[1] FALSE
+
+
+[1] TRUE
+[1] TRUE
+[1] TRUE
+[1] TRUE
+[1] TRUE
+[1] TRUE
+[1] TRUE
+[1] TRUE
+[1] TRUE
+[1] TRUE
+[1] TRUE
+[1] TRUE
+[1] TRUE
+[1] TRUE
+[1] TRUE
+[1] TRUE
+[1] TRUE
+[1] TRUE
+[1] TRUE
+[1] TRUE
+[1] TRUE
+[1] TRUE
+[1] TRUE

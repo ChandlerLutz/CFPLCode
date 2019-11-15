@@ -1,0 +1,16 @@
+R_CFPL_OCC_CsvFiles/*.csv
+R_CFPL_Step1_Default_CsvFiles/**/*.csv
+CFPL_Border/data-raw/
+CFPL_Border/data-raw-old/
+CFPL_OCC/data-raw/
+
+*.pdf
+getCFPLCode.R
+10-get_cfpl_data_code.R
+*~
+packrat.R
+packrat/bundles/
+.Rhistory
+.Rprofile
+packrat/lib*/
+CFPLML_scratch_All_Rfiles_to_run.rds
